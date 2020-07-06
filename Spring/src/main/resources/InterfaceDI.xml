@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id="callingService" class="com.mollaInterfaceDI.CallingService"></bean>
+   <bean id="dataService" class="com.mollaInterfaceDI.DataService"></bean>
+   <bean id="tuneService" class="com.mollaInterfaceDI.TuneService"></bean>
+  
+ <bean id="ATandTcalling" class="com.mollaInterfaceDI.ATandT">
+	<property name="service" ref="callingService" />
+  </bean>
+
+ <bean id="ATandTData" class="com.mollaInterfaceDI.ATandT">
+	<property name="service" ref="dataService" />
+  </bean>
+  <bean id="ATandTtune" class="com.mollaInterfaceDI.ATandT">
+	<property name="service" ref="tuneService" />
+  </bean>
+
+	
+
+</beans>

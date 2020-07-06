@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id="commonInfo" class="com.mollaCommonDI.CommonInfo"></bean>
+
+	<bean id="Faruq" class="com.mollaCommonDI.StudentOne">
+	<property name="roll" value="1"></property>
+	<property name="name" value="Faruq Molla"></property>
+	<property name="score" value="80"></property>
+	<property name="mathscore" ref="commonInfo" />
+</bean>
+
+
+	<bean id="Khaled" class="com.mollaCommonDI.StudentTwo">
+	<property name="roll" value="2"></property>
+	<property name="name" value="Khaled chowdhery"></property>
+	<property name="score" value="90"></property>
+	<property name="mathscore" ref="commonInfo" />
+</bean>
+
+<bean id="Shahin" class="com.mollaCommonDI.StudentThree">
+	<property name="roll" value="3"></property>
+	<property name="name" value="Shahin Sikder"></property>
+	<property name="score" value="80"></property>
+	<property name="mathscore" ref="commonInfo" />
+</bean>
+
+</beans>

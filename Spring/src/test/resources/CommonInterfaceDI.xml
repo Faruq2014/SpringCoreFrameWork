@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id="ATandTService" class="com.molla.CommonInterfaceDI.ATandT"></bean>
+     <bean id="VerzionService" class="com.molla.CommonInterfaceDI.Verizone"></bean>
+       <bean id="tmobileService" class="com.molla.CommonInterfaceDI.Tmobile"></bean>
+ 
+  
+ <bean id="Sim" class="com.molla.CommonInterfaceDI.ServiceProvider">
+	<property name="service" ref="ATandTService" />
+  </bean>
+
+<bean id="Sim1" class="com.molla.CommonInterfaceDI.ServiceProvider">
+	<property name="service" ref="tmobileService" />
+  </bean>
+	
+
+</beans>

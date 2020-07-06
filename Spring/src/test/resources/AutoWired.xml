@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id="ac" class="com.molla.AutoWired.AirCondition"/>
+
+   
+   <!-- id must match with the name in the between regular class and injected class -->  
+  <!-- in this example DashBoard class ac is the reference id. it must match with 
+  auto wired by name. -->
+  
+<!--   <bean id="DashBoard" class="com.molla.AutoWiredById.DashBoard" autowire ="byName">
+  </bean>
+  -->
+   <!-- Type must match with the name in the between regular class and injected class -->  
+  <!-- in this example DashBoard class dependency is AirCondition  class. it must match with 
+  auto wired by class . -->
+  
+  
+<!--   <bean id="DashBoard" class="com.molla.AutoWiredById.DashBoard" autowire ="byType">
+  </bean> --> 
+  
+  
+   <!-- By constructor , you must create a constructor in the injecting class. -->  
+  <!-- in this example DashBoard class dependency is AirCondition  class. DashBoard class must create a constructor for Air condition class to inject. 
+  -->
+  
+  
+   <bean id="DashBoard" class="com.molla.AutoWired.DashBoard" autowire ="constructor">
+  </bean>
+  
+
+
+</beans>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd"
+    default-init-method="init"
+    default-destroy-method="destroy"
+   
+    >
+    
+     <!--  
+      this default init and destroy method will take care all the classes in
+      the project
+     --> 
+     
+   <bean id="studentDB" class="com.molla.Bean_LifeCycle_XML.Student_Name">   
+  <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+     <property name="user" value="Faruq"/>
+      <property name="password" value="1234"/>
+   </bean>
+   
+  
+  
+   <bean id="studentDB1" class="com.molla.Bean_LifeCycle_XML.Student_Course">   
+  <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+     <property name="user" value="Faruq"/>
+      <property name="password" value="1234"/>
+   </bean>
+   
+    <bean id="studentDB2" class="com.molla.Bean_LifeCycle_XML.Student_Session">   
+  <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+     <property name="user" value="Faruq"/>
+      <property name="password" value="1234"/>
+   </bean>
+   
+    <bean id="studentDB3" class="com.molla.Bean_LifeCycle_XML.Student_Tution">   
+  <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+     <property name="user" value="Faruq"/>
+      <property name="password" value="1234"/>
+   </bean>
+   
+</beans>
